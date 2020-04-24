@@ -40,6 +40,7 @@ tflint_() {
     path_uniq="${path_uniq//__REPLACED__SPACE__/ }"
 
     pushd "$path_uniq" > /dev/null
+    echo "exec: tflint $args"
     tflint $args
     popd > /dev/null
   done
